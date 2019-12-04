@@ -1,0 +1,12 @@
+.index-header
+  .index-header__contents
+    .index-header__contents--logo
+      .index-header__contents--logo--title
+        = link_to root_path do
+          calendar
+    .index-header__contents--edit
+      %ul
+        %li
+          = link_to new_event_path do
+            %i.fas.fa-edit
+            予定を登録
