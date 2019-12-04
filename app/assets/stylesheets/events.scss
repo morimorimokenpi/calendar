@@ -1,0 +1,79 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: #f2f4f8;
+}
+
+#calendar {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: scroll;
+  .fc-unthemed th,
+  .fc-unthemed td {
+  border-color: #ddd;
+  }
+  .fc-sat {
+    color: blue;
+  }
+  .fc-sun {
+    color: red;
+  }
+  .fc-center {
+    font-size: 35px;
+  }
+  .fc-widget-header {
+    background: #f8f8f8;
+  }
+}
+
+.event-container {
+  background-color: #f2f4f8;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  &__contents {
+    width:  450px;
+    padding: 25px 50px 25px 50px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 2px;
+    &--form {
+      width: 100%;
+      .bootstrap-date {
+        width: auto;
+        display: inline-block;
+      }
+      .event-title {
+        width: 100%;
+        margin-bottom: 20px;
+        &__input {
+          width: 350px;
+          border-bottom: solid 1px #ccc;
+          border-right: none;
+          border-left: none;
+          border-top: none;
+          border-radius: 0px;
+        }
+      }
+      .event-start {
+        margin-bottom: 20px;
+      }
+      .event-submit {
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+        &__btn {
+          text-align: center;
+          width: 160px;
+          height: 35px;
+          border-radius: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
