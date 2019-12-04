@@ -10,7 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require bootstrap
+//= require moment
+//= require moment/ja.js
+//= require fullcalendar
+//= require fullcalendar/lang/ja
 //= require_tree .
