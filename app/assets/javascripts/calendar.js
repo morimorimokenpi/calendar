@@ -19,7 +19,9 @@ $(document).on("turbolinks:load", function() {
         basicWeek: false,
         default: true
       },
-      events: event // 受け取ったjsonの中身全部表示
+      events: event,// 受け取ったjsonの中身全部表示
+      eventColor: 'rgb(121, 134, 203)',
+      eventTextColor: 'white'
     });
   })
   .fail(function(event) {
