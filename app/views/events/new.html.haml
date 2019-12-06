@@ -1,19 +1,2 @@
 = render 'layouts/header'
-.event-container
-  .event-container__contents
-    .event-container__contents--form
-      = form_with model: @event, local: true do |f|
-        .event-title
-          = f.text_field :title, class: "event-title__input", placeholder: "予定を入力..."
-        .event-start
-          = f.label :開始時間
-          %br
-          %i.far.fa-clock
-          = f.datetime_select :start, {use_two_digit_numbers: true, datetime_separator: " "}, class: "form-control bootstrap-date"
-        .event-end
-          = f.label :終了時間
-          %br
-          %i.far.fa-clock
-          = f.datetime_select :end, {use_two_digit_numbers: true, datetime_separator: " "}, class: "form-control bootstrap-date"
-        .event-submit
-          = f.submit "この内容で登録する", class: "event-submit__btn"
+= render 'form'
