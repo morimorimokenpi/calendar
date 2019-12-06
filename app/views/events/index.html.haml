@@ -1,2 +1,30 @@
 = render 'layouts/header'
-#calendar
+.event-index-container
+  %h2.event-index-container__title
+    %i.far.fa-flag
+    予定一覧
+  - @events.each do |event|
+    .event-index-container__content
+      %h5.event-index-container__content--header
+        %i.fas.fa-exclamation-circle
+        = event.title
+      .event-index-container__content--schedule
+        %p.event-start.event-time
+          %i.far.fa-clock
+          開始
+        %p.event-start__body
+          = event.start.strftime("%Y-%m-%d　%H:%M")
+      .event-index-container__content--schedule
+        %p.event-end.event-time
+          %i.far.fa-stop-circle
+          終了
+        %p.event-end__body
+          = event.end.strftime("%Y-%m-%d　%H:%M")
+      .event-button
+        .event-button__right
+          = link_to edit_event_path(event) do
+            %i.far.fa-edit
+            編集する
+          = link_to event_path(event), method: :delete do
+            %i.far.fa-trash-alt
+            削除する

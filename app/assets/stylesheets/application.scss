@@ -5,4 +5,38 @@
 
 @import "bootstrap";
 @import "./reset";
+@import "calendars";
 @import "events/events";
+
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: #f2f4f8;
+}
+
+* {
+  box-sizing: border-box;
+  overflow: scroll;
+  -ms-overflow-style: none; // IEでスクロールバーを非表示にする
+  overflow: -moz-scrollbars-none; // Firefoxでスクロールバーを非表示にする
+  text-decoration: none;
+}
+
+// Chromeでスクロールバーを非表示にする
+*::-webkit-scrollbar {
+  display: none;
+}
+
+// フォーム入力時の枠線を強制的に消す
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
