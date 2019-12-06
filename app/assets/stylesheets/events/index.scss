@@ -2,29 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background: #f2f4f8;
-}
-
-#calendar {
-  width: 1200px;
-  margin: 0 auto;
-  margin-top: 30px;
-  overflow: scroll;
-  .fc-unthemed th,
-  .fc-unthemed td {
-  border-color: #ddd;
+.event-index-container {
+  margin: 50px auto;
+  width: 650px;
+  &__title {
+    color: #4d4d4d;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
   }
-  .fc-sat {
-    color: blue;
-  }
-  .fc-sun {
-    color: red;
-  }
-  .fc-center {
-    font-size: 35px;
-  }
-  .fc-widget-header {
-    background: #f8f8f8;
+  &__content {
+    background: #fff;
+    text-align: left;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    &--header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    &--schedule {
+      display: flex;
+      p {
+        font-size: 16px;
+        color: #6c757d;
+      }
+      .event-time {
+        width: 10%;
+        i {
+          font-size: 0.7rem;
+        }
+      }
+    }
+    .event-button {
+      &__right {
+        text-align: right;
+        a {
+          color: #666;
+          font-size: 13px;
+          font-weight: 400;
+          margin-right: 8px;
+        }
+        a:hover {
+          color: #e83e8c;
+        }
+      }
+    }
   }
 }
