@@ -1,8 +1,13 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:destroy, :edit, :update]
+  before_action :set_color, only: [:new, :edit]
 
   def index
     @events = Event.all.order("created_at DESC")
+    @job_events = @events.where(color_id: 1)
+    @play_events = @events.where(color_id: 2)
+    @todo_events = @events.where(color_id: 3)
+    @other_events = @events.where(color_id: 4)
   end
   
   def new
@@ -19,23 +24,25 @@ class EventsController < ApplicationController
   end
 
   def edit
-    event = Event.find(params[:id])
   end
 
   def update
   end
 
   def destroy
-    event = Event.find(params[:id])
-    redirect_to events_path if event.destroy
+    redirect_to events_path if @event.destroy
   end
 
   private
   def set_event
-    event = Event.find(params[:id])
+    @event = Event.find(params[:id])
+  end
+
+  def set_color
+    @colors = Color.order("id ASC")
   end
   
   def event_params
-    params.require(:event).permit(:title, :start, :end)
+    params.require(:event).permit(:title, :start, :end, :color_id)
   end
 end

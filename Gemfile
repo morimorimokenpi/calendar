@@ -71,6 +71,7 @@ gem 'fullcalendar-rails'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'momentjs-rails'
+gem 'seed-fu'
 gem 'sprockets', '3.7.2'
 gem 'pry-rails'
 
