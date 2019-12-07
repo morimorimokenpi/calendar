@@ -20,11 +20,22 @@ $(document).on("turbolinks:load", function() {
         default: true
       },
       events: event,// 受け取ったjsonの中身全部表示
-      eventColor: 'rgb(121, 134, 203)',
       eventTextColor: 'white'
     });
   })
   .fail(function(event) {
     alert("ng");
+  });
+
+  jQuery(function($){
+    $('.tab').click(function(){
+      $('.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.is-show').removeClass('is-show');
+      // クリックしたタブからインデックス番号を取得
+      const index = $(this).index();
+      // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+      $('.event-index-container__content').eq(index).addClass('is-show');
+    });
   });
 });
