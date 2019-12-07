@@ -14,5 +14,11 @@
           %br
           %i.far.fa-clock
           = f.datetime_select :end, {use_two_digit_numbers: true, datetime_separator: " "}, class: "form-control bootstrap-date"
+        .event-color
+          - @colors.each do |color|
+            = f.radio_button :color_id, color.id
+            %span
+              %font{color: "#{color.code}"} ■
+              = color.name
         .event-submit
           = f.submit "この内容で登録する", class: "event-submit__btn"
