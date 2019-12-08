@@ -66,6 +66,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'compass-rails', github: 'Compass/compass-rails'
+gem 'devise'
+gem 'devise-i18n-views'
 gem 'erb2haml'
 gem 'fullcalendar-rails'
 gem 'haml-rails'
