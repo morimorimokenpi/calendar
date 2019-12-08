@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  belongs_to :user
   belongs_to :color
 
   validates :title, presence: true

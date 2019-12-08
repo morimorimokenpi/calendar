@@ -1,0 +1,392 @@
+html, body {
+  background-color: #f2f4f8;
+  height: 100%;
+}
+
+
+.gmenu {
+  overflow: hidden;
+  text-align: center;
+  width: 200px;
+  border: none!important;
+
+}
+.gmenu > li {
+  float: right;
+  width: 100px!important;;
+  display: inline-block;
+  border: none!important;
+}
+.logo a:hover {
+  background: none!important;
+}
+.logo {
+font-family: 'roboto', sans-serif;
+font-size: 25px!important;
+}
+
+
+.form_box {
+  text-align: center;
+  margin-top: 10%;
+  -moz-animation: anime1 2s ease;
+  -webkit-animation: anime1 2s ease;
+  -o-animation: anime1 2s ease;
+  -ms-animation: anime1 2s ease;
+  position: relative;
+  h2 {
+    color: black;
+    font-size: 24px;
+    span {
+      color: #999;
+      font-size: 12px;
+      display: block;
+      font-weight: normal;
+    }
+  }
+  .row {
+    width: 330px;
+    margin: auto;
+  }
+
+  .col-xs-6 {
+    width: 48%;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    &:nth-child(2) {
+      float: right;
+      text-align: right;
+    }
+  }
+  .label {
+    width: 330px;
+    text-align: left;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  .field {
+    width: 330px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 8px;
+    &__avatar {
+      font-size: 12px;
+    }
+  }
+
+  input[type=email],input[type=password],input[type=text] {
+    font-family: Roboto, 游ゴシック, YuGothic, 'ヒラギノ角ゴ Pro W6', 'HIragino Kaku Gothic Pro W6', 'HIragino Kaku Gothic Pro', Meryo, メイリオ, Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    padding: 5px 10px 0;
+    width: 310px;
+    margin: 10px 0;
+    border-radius: 3px;
+    border-color: #EAEAEA;
+  }
+  input[type="file"] {
+    font-family: Roboto, 游ゴシック, YuGothic, 'ヒラギノ角ゴ Pro W6', 'HIragino Kaku Gothic Pro W6', 'HIragino Kaku Gothic Pro', Meryo, メイリオ, Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px 10px 0;
+    width: 310px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .submit input {
+    font-family: Roboto, 游ゴシック, YuGothic, 'ヒラギノ角ゴ Pro W6', 'HIragino Kaku Gothic Pro W6', 'HIragino Kaku Gothic Pro', Meryo, メイリオ, Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+    font-size: 14px;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 10px;
+    width: 330px;
+    margin: 20px auto;
+    background-color: transparent;
+    color: black;
+    display: block;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.yjContainer {
+  overflow: hidden;
+}
+.user_page-header {
+  background: #FFFFFF;
+  padding: 20px 0;
+  -moz-box-shadow:    0px 1px 3px 0px rgba(109,109,109,0.09);
+  box-shadow:         0px 1px 3px 0px rgba(109,109,109,0.09);
+  .user_image {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+    img {
+      width: 60px;
+    }
+  }
+  h2 {
+    line-height: 60px;
+    font-size: 20px;
+    margin: 0;
+    span {
+      color: #999;
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}
+
+.more_link_box {
+  border-top: 1px solid #ddd;
+  width: 330px;
+  padding: 10px 0;
+  font-size: 12px;
+  margin: auto;
+  a,input {
+    border: 1px solid #ddd;
+    background-color: transparent;
+    width: 150px;
+    padding: 5px 10px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 3px;
+  }
+}
+
+.entry_button > a {
+  border-radius: 2px;
+  margin-top: 11px;
+  padding: 8px 15px!important;
+}
+.copyright {
+  text-align: center;
+  padding: 13px 0 0;
+  font-size: 10px;
+}
+
+input, textarea {
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+
+.user_page-contents {
+  li,& {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    background-size: cover;
+    min-height: 300px;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 20.4%;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+    -moz-box-shadow:    0px 2px 10px 0px rgba(0,0,0,0.08);
+    box-shadow:         0px 2px 10px 0px rgba(0,0,0,0.08);
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    .meta {
+      background-image: -o-linear-gradient(-89deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.95) 100%);
+      background-image: -moz-linear-gradient(-89deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.95) 100%);
+      background-image: -ms-linear-gradient(-89deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.95) 100%);
+      background-image: linear-gradient(-179deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.95) 100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 10px 10px;
+      font-size: 14px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+      color: #fff;
+      .title {
+        float: left;
+      }
+      .star {
+        color: #F5A624;
+        float: right;
+        text-shadow: 0 0 0 #fff;
+        line-height: 1.5;
+      }
+      .star-actived,.rating-star {
+        line-height: 1.5;
+      }
+      .user_review {
+        font-size: 12px;
+        clear: both;
+      }
+    }
+  }
+}
+
+.test-login {
+  border-radius: 4px;
+  background: #444;
+  color: #fff;
+  display: block;
+  width: 310px;
+  line-height: 40px;
+  font-size: 13px;
+  border: 1px solid rgba( 0, 0, 0, .2 );
+  text-align: center;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+
+@-moz-keyframes anime1 {
+0% {top: -40px;opacity: 0;}
+100% {top: 0px; opacity: 1;}
+}
+
+@-webkit-keyframes anime1 {
+0% {top: -40px;opacity: 0;}
+100% {top: 0px; opacity: 1;}
+}
+
+@-o-keyframes anime1 {
+0% {top: -40px;opacity: 0;}
+100% {top: 0px; opacity: 1;}
+}
+
+@-ms-keyframes anime1 {
+0% {top: -40px;opacity: 0;}
+100% {top: 0px; opacity: 1;}
+}
+
+.user-update-container {
+  width: 725px;
+  padding: 25px 50px 0 50px;
+  background-color: white;
+  margin: 15px auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  padding-bottom: 10px;
+  .user-update-container-form{
+    display: flex;
+    &__left-content {
+      width: 300px;
+      height: 160px;
+      .user-preview {
+        position: relative;
+        i {
+          color: black;
+          position: absolute;
+          top: 0;
+          right: 150px;
+          opacity: 0.8;
+          border: solid rgba(0, 0, 0, 0.08) 1px;
+          border-radius: 50%;
+          padding: 10px;
+          cursor: pointer;
+        }
+        img {
+          height: 120px;
+          width: 120px;
+          border-radius: 50%;
+          margin: 36px 0 0 102px;
+          border: solid rgba(0, 0, 0, 0.08) 1px;
+        }
+      }
+    }
+    &__right-content {
+      width: 325px;
+      margin-top: 36px;
+    }
+    .field {
+      margin-bottom: 30px;
+      #user-edit-icon {
+        display: none;
+      }
+      input {
+        line-height: 30px;
+        font-size: 16px;
+        color: #4a4a4a;
+        width: 270px;
+        border-bottom: solid 1px #4a4a4a;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        border-radius: 0px;
+      }
+    }
+  }
+  .actions {
+    text-align: center;
+    .submit, .delete-button {
+      display: inline-block;
+      margin-right: 15px;
+      width: 62px;
+      height: 43px;
+      vertical-align: top;
+      background: #f2f4f8;
+      border: 1px solid var(--d0b, #dbdbdb);
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+      text-align: center;
+    }
+    .delete-button {
+      padding-top: 10px;
+    }
+    .submit:active, .delete-button:active {
+      transform: translateY(4px);
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+      border-bottom: none;
+    }
+  }
+  .back {
+    font-size: 20px;
+  }
+}
+
+#error_explanation {
+  font-size: 12px;
+  width: 400px;
+  margin: 10px auto;
+  text-align: left;
+  border: 1px solid #FFC8A3;
+  padding: 10px;
+  background-color: #FFFBF9;
+  h2 {
+    font-size: 12px;
+  }
+  ul {
+    margin: 0;
+  }
+  li {
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+}
