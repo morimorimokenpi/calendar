@@ -5,20 +5,21 @@
         .event-title
           = f.text_field :title, class: "event-title__input", placeholder: "予定を入力..."
         .event-start
-          = f.label :開始時間
+          = f.label :start
           %br
           %i.far.fa-clock
           = f.datetime_select :start, {use_two_digit_numbers: true, datetime_separator: " "}, class: "form-control bootstrap-date"
         .event-end
-          = f.label :終了時間
+          = f.label :end
           %br
           %i.far.fa-clock
           = f.datetime_select :end, {use_two_digit_numbers: true, datetime_separator: " "}, class: "form-control bootstrap-date"
         .event-color
-          - @colors.each do |color|
-            = f.radio_button :color_id, color.id
-            %span
-              %font{color: "#{color.code}"} ■
-              = color.name
+          - if @colors.present?
+            - @colors.each do |color|
+              = f.radio_button :color_id, color.id
+              %span
+                %font{color: "#{color.code}"} ■
+                = color.name
         .event-submit
           = f.submit "この内容で登録する", class: "event-submit__btn"
