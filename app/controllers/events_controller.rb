@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:destroy, :edit, :update]
   before_action :set_color, only: [:new, :edit]
+  before_action :check_user, only: [:edit, :destroy]
 
   def index
     @events = Event.all.order("created_at DESC")
@@ -43,6 +44,10 @@ class EventsController < ApplicationController
   end
   
   def event_params
-    params.require(:event).permit(:title, :start, :end, :color_id)
+    params.require(:event).permit(:title, :start, :end, :color_id).merge(user_id: current_user.id)
+  end
+
+  def check_user
+    redirect_to root_path if @event.user_id != current_user.id
   end
 end
