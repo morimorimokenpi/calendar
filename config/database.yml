@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: calender_production
-  username: calender
-  password: <%= ENV['CALENDER_DATABASE_PASSWORD'] %>
+  database: postgresql
+  encoding: unicode
+  pool: 5
