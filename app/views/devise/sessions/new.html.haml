@@ -6,11 +6,8 @@
           %h2
             calendar
             %span ログイン
-          -# .test-user
-          -#   = form_for(User.new, url: user_session_path) do |f|
-          -#     = f.hidden_field :email, value: "test@example.com"
-          -#     = f.hidden_field :password, value: 123456
-          -#     = f.submit 'テストユーザーとしてログイン', class: "test-login"
+          .test-user
+            = link_to "テストユーザーとしてログイン", users_guest_sign_in_path, method: :post, class: "test-login"
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
             %div
               = f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力'
